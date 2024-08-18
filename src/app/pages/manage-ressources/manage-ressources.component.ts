@@ -5,9 +5,7 @@ import {FixedExpense} from "../../model/expense/FixedExpense";
 import {MonthlyIncomeList} from "../../model/income/MonthlyIncomeList";
 import {IncomeService} from "../../service/income.service";
 import {FixedIncome} from "../../model/income/FixedIncome";
-import {
-  RessourceDisplayConfiguration
-} from "../../components/ressources-display/ressources-display.component";
+import {RessourceDisplayConfiguration} from "../../core/ressources-display/ressources-display.component";
 
 @Component({
   selector: 'app-manage-ressources',
