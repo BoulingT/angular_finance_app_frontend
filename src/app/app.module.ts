@@ -11,7 +11,8 @@ import {ManageRessourcesComponent} from "./pages/manage-ressources/manage-ressou
 import {InfoCardComponent} from "./core/info-amount-card/info-card.component";
 import {RepartitionDiagramComponent} from "./core/graphs/repartition-diagram/repartition-diagram.component";
 import {RessourcesDisplayComponent} from "./core/ressources-display/ressources-display.component";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {TokenInterceptorService} from "./core/authentication/token-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,14 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule,
     AuthModule,
   ],
-  providers: [provideRouter((routes))],
+  providers: [
+    provideRouter((routes)),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true,
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
