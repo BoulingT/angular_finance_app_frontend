@@ -7,7 +7,7 @@ import {AuthenticationComponent} from "./core/authentication/authentication-page
 export const routes: Routes = [
   {path: 'homepage', component: HomepageComponent},
   {path: '', redirectTo: '/homepage', pathMatch: 'full'},
-  {path: 'manage-ressources', component: ManageRessourcesComponent},
+  {path: 'manage-resources', component: ManageRessourcesComponent},
   {path: 'authentication', component: AuthenticationComponent},
 ];
 

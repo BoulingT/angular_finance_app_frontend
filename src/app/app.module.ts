@@ -13,6 +13,7 @@ import {RepartitionDiagramComponent} from "./core/graphs/repartition-diagram/rep
 import {RessourcesDisplayComponent} from "./core/ressources-display/ressources-display.component";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {TokenInterceptorService} from "./core/authentication/token-interceptor.service";
+import { NavbarComponent } from './core/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {TokenInterceptorService} from "./core/authentication/token-interceptor.s
     ManageRessourcesComponent,
     InfoCardComponent,
     RepartitionDiagramComponent,
-    RessourcesDisplayComponent
+    RessourcesDisplayComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
